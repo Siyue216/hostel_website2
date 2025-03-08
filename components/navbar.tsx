@@ -3,8 +3,8 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Shield } from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import Image from "next/image";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -17,13 +17,18 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="flex items-center gap-2 mr-6">
-          <Shield className="h-6 w-6" />
+          <Image
+            src="/images/logo1.png"
+            alt="Institution Logo 1"
+            width={50}
+            height={50}
+          />
           <span className="hidden font-bold sm:inline-block">Military Boys Hostel</span>
         </Link>
         <nav className="hidden md:flex gap-6 flex-1">
-          <Link href="/" className="text-sm font-medium transition-colors hover:text-primary">
+          {/* <Link href="/" className="text-sm font-medium transition-colors hover:text-primary">
             Home
-          </Link>
+          </Link> */}
           <Link href="/gallery" className="text-sm font-medium transition-colors hover:text-primary">
             Gallery
           </Link>
@@ -65,13 +70,13 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="right">
               <div className="grid gap-6 py-6">
-                <Link
+                {/* <Link
                   href="/"
                   onClick={closeSheet}
                   className="text-lg font-medium transition-colors hover:text-primary"
                 >
                   Home
-                </Link>
+                </Link> */}
                 <Link
                   href="/gallery"
                   onClick={closeSheet}

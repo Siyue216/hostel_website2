@@ -93,8 +93,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Email Address</h3>
-                    <p className="text-gray-600">info@militaryboyshotel.com</p>
-                    <p className="text-gray-600">admissions@militaryboyshotel.com</p>
+                    <p className="text-gray-600">anuragwazarkar.mbh@gmail.com</p>
                   </div>
                 </div>
 
@@ -104,8 +103,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Office Hours</h3>
-                    <p className="text-gray-600">Monday - Friday: 9:00 AM - 5:00 PM</p>
-                    <p className="text-gray-600">Saturday: 9:00 AM - 1:00 PM</p>
+                    <p className="text-gray-600">Monday - Friday: 10:00 AM - 5:00 PM</p>
+                    <p className="text-gray-600">Saturday: 10:00 AM - 1:00 PM</p>
                     <p className="text-gray-600">Sunday: Closed</p>
                   </div>
                 </div>

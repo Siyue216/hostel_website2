@@ -93,7 +93,7 @@ export default function AdmissionPage() {
                 Your application has been received successfully. Our team will review your application and contact you
                 soon.
               </p>
-              <p>For any queries, please contact us at +91 1234567890 or email at info@militaryboyshotel.com</p>
+              <p>For any queries, please contact us at +91 8788013579 or email at anuragwazarkar.mbh@gmail.com</p>
               <Button onClick={() => setIsSubmitted(false)}>Submit Another Application</Button>
             </div>
           </CardContent>
@@ -231,14 +231,11 @@ export default function AdmissionPage() {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="5">5th Grade</SelectItem>
-                          <SelectItem value="6">6th Grade</SelectItem>
-                          <SelectItem value="7">7th Grade</SelectItem>
-                          <SelectItem value="8">8th Grade</SelectItem>
-                          <SelectItem value="9">9th Grade</SelectItem>
-                          <SelectItem value="10">10th Grade</SelectItem>
-                          <SelectItem value="11">11th Grade</SelectItem>
-                          <SelectItem value="12">12th Grade</SelectItem>
+                          <SelectItem value="5">11th Grade</SelectItem>
+                          <SelectItem value="6">12th Grade</SelectItem>
+                          <SelectItem value="7">ITI</SelectItem>
+                          <SelectItem value="8">Graduation</SelectItem>
+                          <SelectItem value="9">Post Graduation</SelectItem>
                         </SelectContent>
                       </Select>
                       <FormMessage />

@@ -56,12 +56,12 @@ export default function RulesPage() {
             <ul className="space-y-4">
               <li className="flex gap-2">
                 <span className="font-bold text-primary">1.</span>
-                <p>Morning PT is compulsory for all students from 6:00 AM to 7:00 AM.</p>
+                <p>Morning PT is compulsory for all students from 5:30 AM to 6:15 AM.</p>
               </li>
               <li className="flex gap-2">
                 <span className="font-bold text-primary">2.</span>
                 <p>
-                  Evening study hours are from 7:00 PM to 9:00 PM, during which all students must be in the study room.
+                  Evening study hours are from 8:30 PM to 10:00 PM, during which all students must be in the study room.
                 </p>
               </li>
               <li className="flex gap-2">
@@ -95,7 +95,7 @@ export default function RulesPage() {
               </li>
               <li className="flex gap-2">
                 <span className="font-bold text-primary">2.</span>
-                <p>Wasting food is strictly prohibited. Take only what you can eat.</p>
+                <p>Wasting food is strictly prohibited.</p>
               </li>
               <li className="flex gap-2">
                 <span className="font-bold text-primary">3.</span>
@@ -125,7 +125,7 @@ export default function RulesPage() {
               <li className="flex gap-2">
                 <span className="font-bold text-primary">1.</span>
                 <p>
-                  Violation of hostel rules will result in disciplinary action, including warnings, fines, or
+                  Violation of hostel rules will result in disciplinary action, including warnings, punishment, fines, or
                   suspension.
                 </p>
               </li>

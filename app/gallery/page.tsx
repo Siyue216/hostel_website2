@@ -39,7 +39,7 @@ export default function GalleryPage() {
             {[...Array(4)].map((_, i) => (
               <GalleryItem
                 key={i}
-                src={`/placeholder.svg?height=300&width=300&text=Festival+${i + 1}`}
+                src={`/images/shivjyanti.jpg?height=300&width=300&text=Festival+${i + 1}`}
                 alt={`Festival Celebration ${i + 1}`}
               />
             ))}
@@ -51,7 +51,7 @@ export default function GalleryPage() {
             {[...Array(4)].map((_, i) => (
               <GalleryItem
                 key={i}
-                src={`/placeholder.svg?height=300&width=300&text=PT+Session+${i + 1}`}
+                src={`/videos/drill.mp4`}
                 alt={`PT Session ${i + 1}`}
               />
             ))}
@@ -75,7 +75,7 @@ export default function GalleryPage() {
             {[...Array(4)].map((_, i) => (
               <GalleryItem
                 key={i}
-                src={`/placeholder.svg?height=300&width=300&text=Play+Time+${i + 1}`}
+                src={`/images/game.jpg?height=300&width=300&text=Play+Time+${i + 1}`}
                 alt={`Play Time ${i + 1}`}
               />
             ))}

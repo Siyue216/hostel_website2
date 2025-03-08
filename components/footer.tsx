@@ -45,8 +45,8 @@ export function Footer() {
             <address className="not-italic text-gray-400 space-y-2">
               <p>Vita-Karad Road, Near Maharashtra Bank</p>
               <p>Saidapur, Karad 415124</p>
-              <p>Phone: +91 1234567890</p>
-              <p>Email: info@militaryboyshotel.com</p>
+              <p>Phone: +91 8440983111</p>
+              <p>Email: anuragwazarkar.mbh@gmail.com</p>
             </address>
           </div>
           <div>
@@ -59,7 +59,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} Military Boys Hostel Karad. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Anurag Wazarkar. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -11,13 +11,26 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative">
           <div className="absolute inset-0">
-            <Image
-              src="/placeholder.svg?height=600&width=1200"
-              alt="Military Boys Hostel Karad"
-              fill
-              className="object-cover"
-              priority
-            />
+            {/* Video Background */}
+            <div className="absolute inset-0 w-full h-full">
+              {/* <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="object-cover w-full h-full"
+              >
+                <source src="/videos/drill.mp4" type="video/mp4" /> */}
+                {/* Fallback to image if video fails to load */}
+                <Image
+                  src="/images/shijyanti_group.jpg"
+                  alt="Military Boys Hostel Karad - Shijyanti Group"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              {/* </video> */}
+            </div>
             <div className="absolute inset-0 bg-black/60" />
           </div>
           <div className="relative container mx-auto px-4 py-32 sm:py-48 lg:py-56">
@@ -108,7 +121,7 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="relative aspect-square overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=300&width=300"
+                  src="/images/shivjyanti.jpg"
                   alt="Festival Celebration"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
@@ -119,7 +132,7 @@ export default function Home() {
               </div>
               <div className="relative aspect-square overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=300&width=300"
+                  src="/videos/drill.mp4?height=300&width=300"
                   alt="PT Sessions"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
@@ -141,7 +154,7 @@ export default function Home() {
               </div>
               <div className="relative aspect-square overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=300&width=300"
+                  src="/images/game.jpg?height=300&width=300"
                   alt="Play Time"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
@@ -178,9 +191,12 @@ export default function Home() {
                         Saidapur, Karad 415124
                       </p>
                     </div>
-                    <div className="flex items-center">
-                      <Phone className="h-6 w-6 text-primary mr-3" />
-                      <p className="text-gray-700">+91 1234567890</p>
+                    <div className="flex items-start">
+                      <Phone className="h-6 w-6 text-primary mt-0.5 mr-3" />
+                      <div>
+                        <p className="text-gray-700">+91 8440983111</p>
+                        <p className="text-gray-700">+91 7875456896</p>
+                      </div>
                     </div>
                   </div>
                   <div className="mt-8">
