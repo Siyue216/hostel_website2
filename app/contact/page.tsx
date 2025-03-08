@@ -9,7 +9,15 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Phone, Mail, Clock } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import emailjs from '@emailjs/browser'
+import { useToast } from "@/components/ui/use-toast"
+
+// Initialize EmailJS with your service ID (you'll need to create an account at emailjs.com)
+// Replace these with your actual EmailJS credentials
+const EMAILJS_SERVICE_ID = "service_duev69z" // Replace with your service ID
+const EMAILJS_TEMPLATE_ID = "template_4gza7vc" // Replace with your template ID
+const EMAILJS_PUBLIC_KEY = "2DXpzNKtd3jXwsJPu" // Replace with your public key
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -31,6 +39,13 @@ const formSchema = z.object({
 
 export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const { toast } = useToast()
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init(EMAILJS_PUBLIC_KEY)
+  }, [])
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -43,9 +58,45 @@ export default function ContactPage() {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values)
-    setIsSubmitted(true)
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true)
+    
+    try {
+      // Prepare the template parameters
+      const templateParams = {
+        to_email: "anurag.mbh@gmail.com",
+        from_name: values.name,
+        from_email: values.email,
+        from_phone: values.phone,
+        subject: values.subject,
+        message: values.message,
+      }
+
+      // Send the email using EmailJS
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      )
+
+      // Set submission as successful
+      setIsSubmitted(true)
+      toast({
+        title: "Message Sent",
+        description: "Your message has been sent successfully!",
+        variant: "default",
+      })
+    } catch (error) {
+      console.error("Error sending email:", error)
+      toast({
+        title: "Error",
+        description: "There was an error sending your message. Please try again later.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -197,8 +248,8 @@ export default function ContactPage() {
                       )}
                     />
 
-                    <Button type="submit" className="w-full">
-                      Send Message
+                    <Button type="submit" className="w-full" disabled={isSubmitting}>
+                      {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
                   </form>
                 </Form>

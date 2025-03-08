@@ -97,7 +97,7 @@ export default function Home() {
                     <div className="p-3 rounded-full bg-primary/10 mb-4">
                       <MapPin className="h-8 w-8 text-primary" />
                     </div>
-                    <h3 className="text-xl font-medium mb-2">Prime Location</h3>
+                    <h3 className="text-xl font-medium mb-2">Location</h3>
                     <p className="text-gray-600">
                       Located on Vita-Karad Road near Maharashtra Bank, Saidapur, Karad, our hostel offers a peaceful
                       environment.
