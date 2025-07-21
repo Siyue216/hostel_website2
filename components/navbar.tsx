@@ -35,17 +35,20 @@ export function Navbar() {
           <Link href="/rules" className="text-sm font-medium transition-colors hover:text-primary">
             Rules
           </Link>
-          <Link href="/admission" className="text-sm font-medium transition-colors hover:text-primary">
+          {/* <Link href="/admission" className="text-sm font-medium transition-colors hover:text-primary">
             Admission
-          </Link>
+          </Link> */}
           <Link href="/contact" className="text-sm font-medium transition-colors hover:text-primary">
             Contact
           </Link>
+          <Link href="/useful-links" className="text-sm font-medium transition-colors hover:text-primary">
+            Useful Links
+          </Link>
         </nav>
         <div className="flex flex-1 items-center justify-end gap-2">
-          <Button asChild className="hidden md:flex">
+          {/* <Button asChild className="hidden md:flex">
             <Link href="/admission">Apply Now</Link>
-          </Button>
+          </Button> */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="md:hidden">
@@ -91,13 +94,13 @@ export function Navbar() {
                 >
                   Rules
                 </Link>
-                <Link
+                {/* <Link
                   href="/admission"
                   onClick={closeSheet}
                   className="text-lg font-medium transition-colors hover:text-primary"
-                >
+                > 
                   Admission
-                </Link>
+                </Link> */}
                 <Link
                   href="/contact"
                   onClick={closeSheet}
@@ -105,11 +108,18 @@ export function Navbar() {
                 >
                   Contact
                 </Link>
-                <Button asChild>
+                <Link
+                  href="/useful-links"
+                  onClick={closeSheet}
+                  className="text-lg font-medium transition-colors hover:text-primary"
+                >
+                  Useful Links
+                </Link>
+                {/* <Button asChild>
                   <Link href="/admission" onClick={closeSheet}>
                     Apply Now
                   </Link>
-                </Button>
+                </Button> */}
               </div>
             </SheetContent>
           </Sheet>

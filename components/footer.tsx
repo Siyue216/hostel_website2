@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link"
 import { Shield } from "lucide-react"
 
@@ -46,7 +47,7 @@ export function Footer() {
               <p>Vita-Karad Road, Near Maharashtra Bank</p>
               <p>Saidapur, Karad 415124</p>
               <p>Phone: +91 8440983111</p>
-              <p>Email: anuragwazarkar.mbh@gmail.com</p>
+              <p>Email: anurag.mbh@gmail.com</p>
             </address>
           </div>
           <div>

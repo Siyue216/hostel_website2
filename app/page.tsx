@@ -1,12 +1,24 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { BookOpen, MapPin, Phone, Users } from "lucide-react"
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  MapPin,
+  Phone,
+  Utensils,
+  Bed,
+  GraduationCap,
+  Wifi,
+  Droplets,
+  Sun,
+  Dumbbell,
+} from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen  ">
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative">
@@ -21,14 +33,14 @@ export default function Home() {
                 className="object-cover w-full h-full"
               >
                 <source src="/videos/drill.mp4" type="video/mp4" /> */}
-                {/* Fallback to image if video fails to load */}
-                <Image
-                  src="/images/shijyanti_group.jpg"
-                  alt="Military Boys Hostel Karad - Shijyanti Group"
-                  fill
-                  className="object-cover"
-                  priority
-                />
+              {/* Fallback to image if video fails to load */}
+              <Image
+                src="/images/shijyanti_group.jpg"
+                alt="Military Boys Hostel Karad - Shijyanti Group"
+                fill
+                className="object-cover"
+                priority
+              />
               {/* </video> */}
             </div>
             <div className="absolute inset-0 bg-black/60" />
@@ -39,13 +51,19 @@ export default function Home() {
                 Military Boys Hostel Karad
               </h1>
               <p className="mt-6 text-xl text-white/90">
-                Providing discipline, education, and a nurturing environment for young minds to grow and excel.
+                Providing discipline, education, and a nurturing environment for
+                young minds to grow and excel.
               </p>
               <div className="mt-10 flex gap-4">
-                <Button asChild size="lg">
+                {/* <Button asChild size="lg">
                   <Link href="/admission">Apply for Admission</Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="bg-white/10 text-white hover:bg-white/20">
+                </Button> */}
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="bg-white/10 text-white hover:bg-white/20"
+                >
                   <Link href="/contact">Contact Us</Link>
                 </Button>
               </div>
@@ -54,13 +72,16 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
+        <section className="py-16 bg-amber-50 ">
+          <div className="container mx-auto px-4 ">
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">About Our Hostel</h2>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                About Our Hostel
+              </h2>
               <p className="mt-4 text-lg text-gray-600">
-                Military Boys Hostel Karad is dedicated to providing a disciplined and supportive environment for
-                students to thrive academically and personally.
+                Military Boys Hostel Karad is dedicated to providing a
+                disciplined and supportive environment for students to thrive
+                academically and personally.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -68,11 +89,12 @@ export default function Home() {
                 <CardContent className="pt-6">
                   <div className="flex flex-col items-center text-center">
                     <div className="p-3 rounded-full bg-primary/10 mb-4">
-                      <BookOpen className="h-8 w-8 text-primary" />
+                      <Utensils className="h-8 w-8 text-primary" />
                     </div>
-                    <h3 className="text-xl font-medium mb-2">Quality Education</h3>
+                    <h3 className="text-xl font-medium mb-2">MESS</h3>
                     <p className="text-gray-600">
-                      We provide an environment conducive to learning with dedicated study hours and academic support.
+                      The hostel provides fresh, balanced meals daily—breakfast,
+                      lunch, evening tea with snacks, and dinner.
                     </p>
                   </div>
                 </CardContent>
@@ -81,12 +103,73 @@ export default function Home() {
                 <CardContent className="pt-6">
                   <div className="flex flex-col items-center text-center">
                     <div className="p-3 rounded-full bg-primary/10 mb-4">
-                      <Users className="h-8 w-8 text-primary" />
+                      <Bed className="h-8 w-8 text-primary" />
                     </div>
-                    <h3 className="text-xl font-medium mb-2">Discipline & Character</h3>
+                    <h3 className="text-xl font-medium mb-2">BASIC KIT</h3>
                     <p className="text-gray-600">
-                      We instill military-style discipline and values that help shape character and build leadership
-                      skills.
+                      Only 3 Students per room and each student will be provided
+                      with bed, mattress, pillow, blanket, bedsheet, plate,
+                      bowl, spoon and glass.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="p-3 rounded-full bg-primary/10 mb-4">
+                      <GraduationCap className="h-8 w-8 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-medium mb-2">Study Rooms</h3>
+                    <p className="text-gray-600">
+                      A separate, quiet, and well-lit study room is provided,
+                      with each student having a table and chair.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="p-3 rounded-full bg-primary/10 mb-4">
+                      <div className="relative">
+                        <Droplets className="h-8 w-8 text-primary" />
+                        <Sun className="h-4 w-4 text-primary absolute -top-1 -right-1" />
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-medium mb-2">Hot Water</h3>
+                    <p className="text-gray-600">
+                      An eco-friendly, solar-powered hot water facility is
+                      available, ensuring a continuous supply of hot water.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="p-3 rounded-full bg-primary/10 mb-4">
+                      <Wifi className="h-8 w-8 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-medium mb-2">Free WIFI</h3>
+                    <p className="text-gray-600">
+                      The hostel has 24-hour free Wi-Fi internet facility, which
+                      is useful for online education and study.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="p-3 rounded-full bg-primary/10 mb-4">
+                      <Dumbbell className="h-8 w-8 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-medium mb-2">Exercise</h3>
+                    <p className="text-gray-600">
+                      Every morning, students undergoing pre-recruitment
+                      training(PT) participate in a 5 km run along with other
+                      physical training activities.
                     </p>
                   </div>
                 </CardContent>
@@ -99,8 +182,8 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-medium mb-2">Location</h3>
                     <p className="text-gray-600">
-                      Located on Vita-Karad Road near Maharashtra Bank, Saidapur, Karad, our hostel offers a peaceful
-                      environment.
+                      Located on Vita-Karad Road near Maharashtra Bank,
+                      Saidapur, Karad, our hostel offers a peaceful environment.
                     </p>
                   </div>
                 </CardContent>
@@ -113,9 +196,12 @@ export default function Home() {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Hostel Life</h2>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                Hostel Life
+              </h2>
               <p className="mt-4 text-lg text-gray-600">
-                Take a glimpse into the daily activities and special moments at our hostel.
+                Take a glimpse into the daily activities and special moments at
+                our hostel.
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -127,29 +213,31 @@ export default function Home() {
                   className="object-cover hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/30 hover:bg-black/40 transition-colors flex items-end">
-                  <p className="text-white p-2 font-medium">Festival Celebrations</p>
+                  <p className="text-white p-2 font-medium">
+                    Festival Celebrations
+                  </p>
                 </div>
               </div>
               <div className="relative aspect-square overflow-hidden rounded-lg">
                 <Image
-                  src="/videos/drill.mp4?height=300&width=300"
-                  alt="PT Sessions"
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/30 hover:bg-black/40 transition-colors flex items-end">
-                  <p className="text-white p-2 font-medium">PT Sessions</p>
-                </div>
-              </div>
-              <div className="relative aspect-square overflow-hidden rounded-lg">
-                <Image
-                  src="/placeholder.svg?height=300&width=300"
+                  src="/hostel-images/IMG-20250313-WA0041.jpg"
                   alt="Study Rooms"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/30 hover:bg-black/40 transition-colors flex items-end">
                   <p className="text-white p-2 font-medium">Study Rooms</p>
+                </div>
+              </div>
+              <div className="relative aspect-square overflow-hidden rounded-lg">
+                <Image
+                  src="/hostel-images/library.jpg"
+                  alt="Library"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/30 hover:bg-black/40 transition-colors flex items-end">
+                  <p className="text-white p-2 font-medium">Library</p>
                 </div>
               </div>
               <div className="relative aspect-square overflow-hidden rounded-lg">
@@ -173,14 +261,17 @@ export default function Home() {
         </section>
 
         {/* Contact Preview */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-amber-50">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Get in Touch</h2>
+                  <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+                    Get in Touch
+                  </h2>
                   <p className="text-lg text-gray-600 mb-6">
-                    Have questions about admissions or want to learn more about our hostel? Contact us today.
+                    Have questions about admissions or want to learn more about
+                    our hostel? Contact us today.
                   </p>
                   <div className="space-y-4">
                     <div className="flex items-start">
@@ -207,7 +298,7 @@ export default function Home() {
                 </div>
                 <div className="relative h-[300px] rounded-lg overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=300&width=500"
+                    src="/images/main_building.jpg"
                     alt="Hostel Building"
                     fill
                     className="object-cover"
@@ -219,6 +310,5 @@ export default function Home() {
         </section>
       </main>
     </div>
-  )
+  );
 }
-
