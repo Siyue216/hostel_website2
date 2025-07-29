@@ -287,7 +287,7 @@ export default function Home() {
                       <Phone className="h-6 w-6 text-primary mt-0.5 mr-3" />
                       <div>
                         <p className="text-gray-700">+91 8440983111</p>
-                        <p className="text-gray-700">+91 7875456896</p>
+                        <p className="text-gray-700">+91 7889661397</p>
                       </div>
                     </div>
                   </div>
